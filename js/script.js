@@ -4,28 +4,26 @@ const sensitivities = [[1/32, '1/11'], [1/16, '2/11'], [1/8], [2/8, '3/11'], [3/
 
 function calculateDPI() {
     const edpi = parseInt(edpiE.value)
-    if (isNaN(edpi)) {
+    if (isNaN(edpi) || edpi < 1) {
         tableE.innerHTML = ''
         return
     }
     let innerHTML = ''
     for (const [index, value] of sensitivities.entries()) {
         const dpi = edpi / value[0]
-        if (Number.isInteger(dpi)) {
-            innerHTML += `
-                <tr>
-                    <td>
-                        ${dpi}
-                    </td>
-                    <td>
-                        ${index + 1}
-                    </td>
-                    <td>
-                        ${value[1] == undefined ? '-' : value[1]}
-                    </td>
-                <tr>
-            `
-        }
+        innerHTML += `
+            <tr>
+                <td>
+                    ${Number.isInteger(dpi) ? dpi : '* ' + Math.round(dpi)}
+                </td>
+                <td>
+                    ${index + 1}
+                </td>
+                <td>
+                    ${value[1] == undefined ? '-' : value[1]}
+                </td>
+            <tr>
+        `
     }
     tableE.innerHTML = innerHTML
 }
