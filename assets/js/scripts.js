@@ -41,13 +41,13 @@ function calculateDPI() {
                     ${Number.isInteger(dpi) ? dpi : '* ' + Math.round(dpi)}
                 </td>
                 <td>
-                    ${value[1]}
-                </td>
-                <td>
-                    ${index + 1} / 20
+                    ${index + 1}
                 </td>
                 <td>
                     ${value[2] === undefined ? '-' : value[2]}
+                </td>
+                <td>
+                    ${value[1]}
                 </td>
             <tr>
         `
