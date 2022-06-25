@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Windows Sensitivity Calculator</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.1.0/dist/cyborg/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -15,34 +15,26 @@
         <div class="row">
             <div class="col-auto"><a href="https://github.com/BoringBoredom/PC-Optimization-Hub/blob/main/README.md#dpi" target="_blank">
                     <h3>Why change DPI?</h3>
-                </a></div>
-        </div>
-        <div class="row">
-            <div class="col-auto"><label class="form-label" style="margin-right: 20px;">eDPI (DPI @ 6/11)</label><input type="number" id="edpi" min="1" value="1600" step="1"></div>
-        </div>
-        <div class="row">
-            <div class="col-auto">
+                </a>
+                <div style="text-align: center;"><label class="form-label">eDPI (DPI @ default)</label><input type="number" id="edpi" min="1" value="1600" step="1"></div>
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
                             <tr>
                                 <th>DPI</th>
-                                <th>Registry</th>
-                                <th>Control Panel Slider</th>
+                                <th>Multiplier</th>
+                                <th>Registry / New Panel</th>
+                                <th>Legacy Panel</th>
                             </tr>
                         </thead>
                         <tbody id="table-content"></tbody>
                     </table>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-auto">
                 <p>Values marked with * are rounded to the nearest integer.</p>
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/scripts.js"></script>
 </body>
 
